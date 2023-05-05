@@ -12,16 +12,16 @@ Pull [golang:1.18-apline](https://hub.docker.com/layers/library/golang/1.18-alpi
 
 ## Build, push and usage
 ### Build your own copy
-If you want to build your own image and/or version, you can download this Dockerfile and modify it for your needs. You then have to type the following: 
+If you want to build your own image and/or version, you can download this Dockerfile and modify it for your needs. You then have to type the following command: 
 
 ```bash
-$ docker build -t tkwc/mailhog:<version> -t tkwc/mailhog:latest --platform linux/arm64,linux/amd64,linux/amd64/v2,linux/ppc64le,linux/s390x  .
+$ docker build -t tkwc/mailhog:<version> -t tkwc/mailhog:latest --platform linux/arm64,linux/amd64,linux/amd64/v2,linux/ppc64le,linux/s390x .
 ```
 
 You should replace tkwc with your docker username and mailhog with your image name. You can also change the platform list depending on what's available on your system. To know what's the platform you can build for from your machine type:
 
 ```bash
-docker buildx ls
+$ docker buildx ls
 ```
 
 ### Publish your version
